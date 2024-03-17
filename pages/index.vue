@@ -1,7 +1,6 @@
 <template>
   <div>
-    <Header />
-    <template v-if="false">
+    <!-- <template v-if="false">
       <TechnicalAnalysis />
       <Chart
         :options="{
@@ -26,12 +25,12 @@
       @click="clickHandler"
     >
       click to show
-    </button>
+    </button> -->
+  
   </div>
 </template>
 
 <script setup>
-import Header from "@/components/Base/Header.vue";
 import datafeed from "@/server/datafeed/datafeed";
 const isLoaded = ref(true);
 
