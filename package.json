@@ -8,7 +8,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@element-plus/nuxt": "^1.0.4",
+    "@element-plus/nuxt": "^1.0.7",
     "@stefanobartoletti/nuxt-social-share": "^0.5.0",
     "autoprefixer": "^10.4.14",
     "nuxt": "^3.11.0",
@@ -20,9 +20,12 @@
     "@pinia/nuxt": "^0.5.1",
     "axios": "^1.6.0",
     "dotenv": "^16.3.1",
-    "element-plus": "^2.3.4",
-    "pinia": "^2.0.35",
+    "element-plus": "^2.6.1",
+    "pinia": "^2.1.7",
     "socket.io-client": "^4.7.4",
     "vue-tradingview-widgets": "^1.2.4"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }
