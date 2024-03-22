@@ -60,38 +60,18 @@
 
           <!-- menu -->
 
-          <el-menu
-            default-active="1"
-            class="el-menu-vertical-demo border-none h-[calc(100vh-230px)]"
-            active-text-color="#5177ff"
-          >
-            <el-menu-item
-              v-for="(item, index) in navigation"
-              :key="index"
-              :index="item.index"
-              class="px-0"
-            >
-              <i
-                class="isax text-[24px] font-normal mr-2 mb-1"
-                :class="`isax-${item.icon}`"
-              />
-              <template #title>
-                <span>{{ item.label }}</span>
-              </template>
-            </el-menu-item>
-          </el-menu>
-        </el-drawer></ClientOnly
-      >
+          <Menu /> </el-drawer
+      ></ClientOnly>
     </div>
   </div>
 </template>
 
 <script setup>
 const { data } = await useFetch("/api/header");
+import Menu from "./Menu.vue";
 import Icon from "@/components/TheIcon/Icon.vue";
 
 //state
 
 const drawer = ref(false);
-const { navigation } = useHeaderNavigation();
 </script>
