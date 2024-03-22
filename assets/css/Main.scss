@@ -83,3 +83,38 @@
   animation: shake-top 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s infinite
     both;
 }
+
+//styles
+
+.base-table {
+  thead {
+    display: table-header-group;
+    @media (max-width: 850px) {
+      display: none;
+    }
+    tr {
+      th {
+        @apply px-[33px] pt-2 pb-2 text-sm text-Gray-b2 dark:text-LightGray-b4 font-normal text-center;
+      }
+    }
+  }
+  tbody {
+    tr {
+      @media (max-width: 850px) {
+        @apply flex flex-col;
+      }
+      td {
+        @apply md:px-[33px] px-[10px] pt-5 pb-4 text-sm text-Gray-b1 dark:text-LightGray-b5   font-normal text-center;
+        @media (max-width: 850px) {
+          @apply w-full flex justify-between;
+          &:not(:not([data-label])):before {
+            align-items: center;
+            content: attr(data-label);
+            display: flex;
+            word-break: normal;
+          }
+        }
+      }
+    }
+  }
+}
